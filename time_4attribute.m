@@ -1,0 +1,11 @@
+nbtime=0.1691;
+att={'NB','KNN','DT'};
+knntime=0.19601;
+dttime=0.129402;
+wholeset=[nbtime knntime dttime];
+figure('Name','TIME COMPARISON');
+bar(wholeset,0.3);
+grid on;
+ylabel 'TIME (s)';
+set(gca,'XTickLabel',att,'YGrid','on');
+title('TIME COMPARISON');

@@ -1,0 +1,15 @@
+nbtime3=[0.020681,0.021303,0.023927,0.018614];
+knntime3=[0.026067,0.027566,0.019711,0.024565];
+dttime3=[0.007909,0.008138,0.007875,0.009617];
+figure('Name','TIME COMPARISON');
+bar([nbtime3;knntime3;dttime3]);
+set(gca,'XTickLabel',{'NBC','KNNC','DTC'},'YGrid','on');
+legend('PETAL LENGTH, SEPAL WIDTH & SEPAL LENGTH','PETAL WIDTH, PETAL LENGTH & SEPAL LENGTH','PETAL WIDTH, SEPAL WIDTH & SEPAL LENGTH','PETAL WIDTH, PETAL LENGTH & SEPAL LENGTH','location','best');
+title('TIME COMPARISON');
+ figure('Name','TIME COMPARISON');
+nbavg=mean(nbtime3);
+knnavg=mean(knntime3);
+dtavg=mean(dttime3);
+bar([nbavg;knnavg;dtavg],0.4);
+set(gca,'XTickLabel',{'NBC','KNNC','DTC'},'YGrid','on');
+title('AVERAGE TIME  OF EACH CLASSIFIER OVER 3 ATTRIBUTES');

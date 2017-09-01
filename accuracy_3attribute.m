@@ -1,0 +1,15 @@
+nbacc3=[88,96,94.6667,94.6667];
+knnacc3=[94.6667,93.3333,93.3333,96];
+dtacc3=[92,93.3333,88,92];
+figure('Name','ACCURACY COMPARISON');
+bar([nbacc3;knnacc3;dtacc3]);
+set(gca,'XTickLabel',{'NBC','KNNC','DTC'},'YGrid','on');
+legend('PETAL LENGTH, SEPAL WIDTH & SEPAL LENGTH','PETAL WIDTH, PETAL LENGTH & SEPAL LENGTH','PETAL WIDTH, SEPAL WIDTH & SEPAL LENGTH','PETAL WIDTH, PETAL LENGTH & SEPAL LENGTH-ACTUAL','location','best');
+title('ACCURACY COMPARISON');
+ figure('Name','ACCURACY COMPARISON');
+nbavg=mean(nbacc3);
+knnavg=mean(knnacc3);
+dtavg=mean(dtacc3);
+bar([nbavg;knnavg;dtavg],0.4);
+set(gca,'XTickLabel',{'NBC','KNNC','DTC'},'YGrid','on');
+title('AVERAGE ACCURACY OF EACH CLASSIFIER OVER 3 ATTRIBUTES');
